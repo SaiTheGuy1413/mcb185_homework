@@ -32,4 +32,28 @@ print(hyp)
 def hypontenuse(a,b):
     return math.sqrt(a**2 + b**2)
 
-print (hypontenuse(3,4))
+print(hypontenuse(3,4))
+
+#F to C conversion
+
+def ftoc(temp):
+    return (temp - 32) * (5/9)
+
+cel = ftoc(50)
+print(cel)
+
+#MPH to KPH conversion
+
+def speedcon(mph):
+    return mph * 1.609
+
+kph = speedcon(10)
+print(kph)
+
+#Distance between two points
+
+def dist(x1, y1, x2, y2):
+    return math.sqrt(((x2-x1)**2) + ((y2-y1)**2))
+
+points = dist(3,2,5,-1)
+print(points)
