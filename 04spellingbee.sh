@@ -1,0 +1,1 @@
+gunzip -c ~/Code/MCB185/data/dictionary.gz | grep -v "[bdefghjklmpqstuvwxy]" | grep "r" | grep -E ".{4,}" 
