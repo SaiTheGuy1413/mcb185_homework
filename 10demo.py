@@ -57,3 +57,62 @@ def dist(x1, y1, x2, y2):
 
 points = dist(3,2,5,-1)
 print(points)
+
+def isinteger(a):
+    if a % 1 > 0:
+        print(False)
+        return False
+    else:
+        print(True)
+        return True
+
+num = isinteger(1)
+num2 = isinteger(1.5)
+
+def isprobable(a):
+    if 0 < a < 1:
+        print('Is probable')
+    else:
+        print('Is not probable')
+
+prob = isprobable(0.2)
+prob2 = isprobable(3)
+
+def molweight(base):
+    if base.lower() == 'a' or base.lower() == 'adenine':
+        return 313.21
+    elif base.lower() == 't' or base.lower() == 'thymine':
+        return 304.19
+    elif base.lower() == 'c' or base.lower() == 'cytosine':
+        return 289.18
+    elif base.lower() == 'g' or base.lower() == 'guanine':
+        return 329.21
+    else:
+        print('error')
+        return None
+    
+nt1 = 'a'
+nt2 = 'T'
+nt3 = 'cytosine'
+nt4 = 'Guanine'
+nt5 = 'fake base'
+
+print(molweight(nt1), molweight(nt2), molweight(nt3), molweight(nt4), molweight(nt5))
+
+def compbase(b):
+    compliment = {
+        'a' : 't',
+        't' : 'a',
+        'c' : 'g',
+        'g' : 'c'
+    }
+    if b.lower() in compliment:
+        return compliment[b.lower()].upper()
+    else:
+        return None
+    
+base1 = 'A'
+base2 = 'c'
+base3 = 'b'
+
+print(compbase(base1), compbase(base2), compbase(base3))
