@@ -116,3 +116,16 @@ base2 = 'c'
 base3 = 'b'
 
 print(compbase(base1), compbase(base2), compbase(base3))
+
+def my_max(a, b, c):
+    if a > b and a > c:
+        return a
+    if b > a and b > c:
+        return b
+    if c > a and c > b:
+        return c
+    else:
+        return None
+
+numlist = (2, 50, 39)
+print(my_max(*numlist))
