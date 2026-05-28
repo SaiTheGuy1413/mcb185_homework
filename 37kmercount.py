@@ -2,7 +2,7 @@ import mcb185
 import sys
 import itertools
 
-k = int(sys.argv[2])
+'''k = int(sys.argv[2])
 kcount = {}
 
 for defline, seq in mcb185.read_fasta(sys.argv[1]):
@@ -17,4 +17,13 @@ for kmer, n in kcount.items():
 for nts in itertools.product('AGTC', repeat = k):
     kmer = ''.join(nts)
     if kmer in kcount: print(kmer, kcount[kmer])
-    else: print(kmer, 0) 
+    else: print(kmer, 0)'''
+
+seq = 'AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGT'
+k = 2
+kloc = {}
+for i in range(len(seq) - k + 1):
+    kmer = seq[i:i+k]
+    if kmer not in kloc: kloc[kmer] = []
+    kloc[kmer].append(i)
+print(kloc)
